@@ -1,72 +1,129 @@
-# 🍔 Food Delivery Mobile App
+# ☕ Coffee App (React Native)
 
-A modern **Food Delivery Mobile Application** built with **React Native and Expo**.  
-This app allows users to browse food, add items to cart, and place orders easily.
+Ứng dụng mobile bán cà phê được xây dựng bằng **React Native + Expo**, hỗ trợ xem danh sách sản phẩm, lọc theo loại và xem chi tiết sản phẩm.
 
-## 📱 Screens
+---
 
-The application includes the following main screens:
+## 🚀 Tính năng
 
-- 🏠 Home Screen
-- 🛒 Shopping Cart Screen
-- 👤 Profile Screen
+* 🏠 Trang Home hiển thị danh sách sản phẩm
+* 🔍 Tìm kiếm sản phẩm
+* 🧃 Lọc theo danh mục (Macchiato, Latte, Americano...)
+* 📦 Xem chi tiết sản phẩm
+* 📱 Giao diện hiện đại, responsive
 
-### Home Screen
-- User location display
-- Food search bar
-- Food categories (Pizza, Burger, Drink, etc.)
-- Popular items list
-- Promotion banner
+---
 
-### Cart Screen
-- Food item preview
-- Quantity control
-- Delivery address
-- Payment method
-- Checkout summary
-- Confirm order button
+## 📂 Cấu trúc thư mục
 
-### Profile Screen
-- User profile information
-- Dark mode toggle
-- Track order
-- Settings
-- Help center
-- Logout button
+```
+src/
+ ├── assets/          # Hình ảnh
+ ├── data/            # Dữ liệu sản phẩm
+ │    └── index.js
+ ├── navigation/      # Điều hướng
+ │    └── Navigation.tsx
+ ├── screens/         # Màn hình
+ │    ├── Home.tsx
+ │    ├── Details.tsx
+ │    └── Splash.tsx
+```
+
+---
+
+## 🛠️ Công nghệ sử dụng
+
+* React Native
+* Expo
+* React Navigation
+* Expo Vector Icons
+* JavaScript / TypeScript
+
+---
+
+## ⚙️ Cài đặt
+
+### 1. Clone project
+
+```bash
+git clone https://github.com/Long14516/111.git
+cd coffee-app
+```
+
+### 2. Cài dependencies
+
+```bash
+npm install
+```
+
+### 3. Chạy app
+
+```bash
+npx expo start
+```
+
+---
+
+## 🧠 Cách hoạt động
+
+### 🔹 Filter sản phẩm
+
+```js
+const filteredProducts =
+  selected === "All Coffee"
+    ? products
+    : products.filter(p => p.type === selected);
+```
+
+### 🔹 Điều hướng sang màn hình Detail
+
+```js
+navigation.navigate("Details", { product: item });
+```
+
+### 🔹 Nhận dữ liệu ở Detail
+
+```js
+const { product } = route.params;
+```
+
+---
+
+## ❗ Lưu ý
+
+* `type` trong data phải trùng với category
+* Ảnh local phải dùng `require()`
+* Không render trực tiếp array vào JSX (phải dùng `.map()`)
+
+---
+
+## 📌 Hướng phát triển
+
+* 🛒 Thêm giỏ hàng
+* ❤️ Favorite sản phẩm
+* 🔐 Đăng nhập / đăng ký
+* 💳 Thanh toán
+* 🔍 Search nâng cao
 
 ---
 
 ## 🖼️ App UI Preview
 
-![App Preview](./assets/app-preview.png)
+![UI 1](./assets/test1.jpg)
+![UI 2](./assets/test2.jpg)
+![UI 3](./assets/test3.jpg)
 
 ---
 
-## ⚙️ Technologies Used
 
-- React Native
-- Expo
-- React Navigation
-- Expo Vector Icons
-- JavaScript
+## 👨‍💻 Thông tin
 
----
-
-## Thong tin
--Ho ten: Ngô Hoàng Long
--Msv:23810310184
--Lớp D18CNPM4
+* Họ tên: Ngô Hoàng Long
+* MSV: 23810310184
+* Lớp: D18CNPM4
 
 ---
-## App UI Preview
 
-![App UI](./assets/361d624268dde683bfcc.jpg)
-![App UI](./assets/9ee54ebb4424ca7a9335.jpg)
-![App UI](./assets/a61117511dce9390cadf.jpg)
+## 📄 License
 
-## 📦 Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/Long14516/111.git# 2204
+MIT License
