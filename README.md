@@ -109,9 +109,9 @@ const { product } = route.params;
 
 ## 🖼️ App UI Preview
 
-![UI 1](./assets/test1.jpg)
-![UI 2](./assets/test2.jpg)
-![UI 3](./assets/test3.jpg)
+![APP UI](./assets/test1.jpg)
+![APP UI](./assets/test2.jpg)
+![APP UI](./assets/test3.jpg)
 
 ---
 
